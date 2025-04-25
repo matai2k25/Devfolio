@@ -1,0 +1,160 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/guideline.css') }}">
+
+<div class="contact-body">
+    <header class="header">
+        <h1>MatAI – AI-Powered Math Assistant</h1>
+        <p>Make math easy to understand with AI!</p>
+    </header>
+
+    <div class="container">
+        <aside class="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#live-access">Live Access</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#project-setup-on-replit">Project Setup on Replit</a></li>
+                <li><a href="#how-to-use-matai">How to Use MatAI</a></li>
+                <li><a href="#environment-variables">Environment Variables</a></li>
+                <li><a href="#sample-queries">Sample Queries</a></li>
+                <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="live-access">
+                <h3>Live Access</h3>
+                <p>To access the live version of the project:</p>
+                <ol>
+                    <li>Visit: <a href="https://mat-ai.username.repl.co" target="_blank">https://mat-ai.username.repl.co</a></li>
+                    <li>Alternatively:
+                        <ol>
+                            <li>Log in to your Replit account.</li>
+                            <li>Open the MatAI project.</li>
+                            <li>Click the "Run" button.</li>
+                            <li>Click "Open in a new tab" from the preview pane.</li>
+                            <li>Copy the URL from the browser to access or share the project.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="overview">
+                <h3>Overview</h3>
+                <p>MatAI is designed to make math easy to understand. Whether you're a student needing help with algebra, calculus, or trigonometry, or a teacher looking for an AI assistant, MatAI provides clear, step-by-step solutions and insights into various mathematical problems.</p>
+            </section>
+
+            <section id="features">
+                <h3>Features</h3>
+                <ul class="features-list">
+                    <li>Solves a wide range of mathematical problems, including algebra, calculus, and geometry.</li>
+                    <li>Offers detailed step-by-step solutions.</li>
+                    <li>Supports input of expressions, equations, and word problems.</li>
+                    <li>Renders graphs and visual aids for applicable problems.</li>
+                    <li>Fully functional in a web browser without any installation.</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack">
+                <h3>Tech Stack</h3>
+                <div class="tech-stack">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Remix</td>
+                                <td>Full-stack web framework</td>
+                            </tr>
+                            <tr>
+                                <td>Replit</td>
+                                <td>Online IDE and deployment</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>Application logic and interaction</td>
+                            </tr>
+                            <tr>
+                                <td>OpenAI API (opt)</td>
+                                <td>AI-based math problem solving</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="project-setup-on-replit">
+                <h3>Project Setup on Replit</h3>
+                <ol>
+                    <li>Go to <a href="https://replit.com" target="_blank">https://replit.com</a> and log in.</li>
+                    <li>Import or fork the MatAI repository.</li>
+                    <li>Open the project.</li>
+                    <li>Click the "Run" button at the top.</li>
+                    <li>After the server starts, use the "Open in a new tab" option in the preview panel to launch the live app.</li>
+                    <li>The opened URL is your live project link.</li>
+                </ol>
+            </section>
+
+            <section id="how-to-use-matai">
+                <h3>How to Use MatAI</h3>
+                <ol>
+                    <li>Open the live application link.</li>
+                    <li>Enter your math question in the input field (e.g., Solve x^2 - 5x + 6 = 0).</li>
+                    <li>Click the "Solve" button or press Enter.</li>
+                    <li>View the step-by-step solution, graphical representation (if applicable), and explanation.</li>
+                    <li>Try multiple types of problems to explore different features.</li>
+                </ol>
+            </section>
+
+            <section id="environment-variables">
+                <h3>Environment Variables</h3>
+                <p>To use AI functionality such as OpenAI API:</p>
+                <ol>
+                    <li>Create a .env file in the root directory.</li>
+                    <li>Add the following line:</li>
+                    <pre><code>OPENAI_API_KEY=your-api-key-here</code></pre>
+                    <li>Replit automatically uses the .env file for environment variables when running the application.</li>
+                </ol>
+            </section>
+
+            <section id="sample-queries">
+                <h3>Sample Queries</h3>
+                <ul>
+                    <li>Solve 2x + 5 = 15</li>
+                    <li>Differentiation of x^3 + 2x^2</li>
+                    <li>Integration of sin(x)</li>
+                    <li>Find the limit of (x^2 - 1)/(x - 1) as x approaches 1</li>
+                    <li>Area of a triangle with base 6 and height 4</li>
+                </ul>
+            </section>
+
+            <section id="contributing">
+                <h3>Contributing</h3>
+                <p>Contributions are welcome. To contribute:</p>
+                <ol>
+                    <li>Fork the repository.</li>
+                    <li>Create a new branch for your feature or bugfix.</li>
+                    <li>Commit your changes with clear messages.</li>
+                    <li>Push your branch and open a pull request.</li>
+                </ol>
+            </section>
+
+            <section id="contact">
+                <h3>Contact</h3>
+                <p>For questions, suggestions, or support, feel free to reach out:</p>
+                <p>Email: <a href="mailto:matai2k25@gmail.com">matai2k25@gmail.com</a></p>
+            </section>
+        </main>
+    </div>
+</div>
+
+{% endblock %}

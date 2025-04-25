@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="right-box">
+    <div class="headings">
+      <h2>ANIMATED SOLUTION DUDE!</h2>
+      <p>Download the Video</p>
+    </div>
+    <div class="video-player">
+      <video id="myVideo" controls>
+        <source id="videoSource"
+          src="{{ url_for('static', filename='renders/videos/generated_scene/480p15/IntroVideo.mp4') }}"
+          type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="left-box">
+    <div class="scrollable-div"></div>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="chat-input-bar">
+    <input type="text" class="chat-input" placeholder="Ask anything">
+    {% if session.user %}
+    <button class="icon-btn send-btn"><i class="fas fa-paper-plane"></i></button>
+    {% else %}
+    <button class="icon-btn send-btn"><i class="fas fa-paper-plane"></i></button>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  
+</script>
+
+
+{% endblock %}

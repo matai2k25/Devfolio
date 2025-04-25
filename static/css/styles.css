@@ -1,0 +1,418 @@
+@font-face {
+  font-family: 'MyAnimeFont';
+  src: url('/static/fonts/Deer.otf') format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #026e84;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px;
+  background-color: #eeeadd;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+
+#navMenu{
+  width: 30%;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #026e84;
+}
+
+.heart {
+  color: #3cbcc3;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #026e84;
+  font-weight: 500;
+}
+
+.join-btn {
+  background-color: #026e84;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+  background-color: #035f6f;
+}
+
+/* Hamburger menu button - hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #026e84;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #eeeadd;
+    border-radius: 0 0 20px 20px;
+    margin-top: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .join-btn {
+    margin-top: 2px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+}
+
+.left-box,
+.right-box {
+  border-radius: 12px;
+}
+
+.left-box {
+  padding:1px;
+  flex: 2;
+  width: 35vh;
+}
+
+.right-box {
+  flex: 2;
+  min-width: 300px;
+}
+
+h1,
+h2,
+.heading {
+  font-family: 'MyAnimeFont', sans-serif;
+  font-size: 3rem;
+  color: #eeeadd;
+  margin:20px;
+}
+
+.video-player video {
+  width: 90%;
+  border-radius: 10px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 0 10px #eeeadd;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
+}
+
+.scrollable-div {
+  display: flex;
+  flex-direction: column-reverse; 
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* Internet Explorer 10+ */
+}
+
+.scrollable-div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+.chat-input-bar {
+  width: 70%;
+  border-radius: 50px;
+  background-color: #1e1e1e; /* dark background */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bar {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.chat-input::placeholder {
+  color: #999;
+}
+
+.icon-btn {
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: #3a3a3a;
+}
+
+.send-btn {
+  border-radius: 50%;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #026e84;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #035f6f;
+}
+
+@media (max-width: 768px) {
+  .bar {
+    flex-direction: column;
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
+  .chat-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  .send-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+
+
+.msg-box {
+  background-color: #eeeadd;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #003333;
+  position: relative;
+  min-width: 250px;
+  max-width: 450px;
+  margin: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.msg-box p {
+  display: inline-block;
+  min-width: 250px;
+  max-width: 300px;
+  word-wrap: break-word; /* for long words/URLs */
+}
+
+
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.bot-message {	
+  display: flex;	
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Shared style for tabs */
+.tab {
+  position: absolute;
+  height:40px;
+  background-color: #eeeadd;
+  border-radius: 10px;
+  padding: 0.1rem 0.9rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific positioning */
+.left-tab {
+  top: -18px;
+  left: 0px;
+}
+
+.right-name {
+  top: -20px;
+  right: 0px;
+  width:30%;
+  justify-content: center;
+  border-top-left-radius: 80px;
+}
+
+/* Specific positioning */
+.bot-right-name {
+  top: -20px;
+  left: 0px;
+  width:30%;
+  justify-content: center;
+  border-top-right-radius: 80px;
+}
+
+.bot-left-tab {
+  top: -18px;
+  right: 0px;
+}
+
+/* Style for dots */
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background-color: #026e84;
+  border-radius: 50%;
+}
+
+/* Optional: Style the title in right-name */
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #003333;
+  margin: 0;
+}
+
+/* Responsive: Stack and adjust padding */
+@media (max-width: 600px) {
+  .msg-box {
+    padding: 1.2rem;
+  }
+
+  .tab {
+    padding: 0.4rem 1rem;
+    font-size: 12px;
+    height:40px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .dots span {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4CAF50;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+
+.dots-anim::after {
+  content: ' ';
+  animation: dots 1s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: ''; }
+  33%  { content: '.'; }
+  66%  { content: '..'; }
+  100% { content: '...'; }
+}

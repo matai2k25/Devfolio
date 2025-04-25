@@ -1,0 +1,169 @@
+
+.contact-body {
+    align-items: center;
+    height: 100vh;           /* Full height of viewport */
+    width: 85vw;            /* Full width of viewport */
+    padding: 2rem;           /* Reduced padding to prevent overflow on small screens */
+    margin: 0;
+    box-sizing: border-box; 
+    color: #ccc;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.table-of-contents {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    height: 90vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.table-of-contents h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #035f6f;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #035f6f;
+}
+
+.table-of-contents a.active {
+    color: #28a745;
+}
+
+.table-of-contents ul li a::before {
+    content: "➤";
+    margin-right: 10px;
+    color: #035f6f;
+}
+
+
+
+
+.main-content {
+    flex: 2;
+    min-width: 70vw;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ccc;
+}
+li{
+    font-size: 14px;
+    color: #ccc;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #b5eef8;
+}
+
+@media (max-width: 768px) {
+    .table-of-contents {
+        flex: 1 1 100%;
+        order: 2;
+    }
+
+    .main-content {
+        flex: 1 1 100%;
+    }
+
+    header {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .main-content {
+        order: 2;
+    }
+}
+@media (max-width: 768px) {
+    .table-of-contents {
+        width: 100%;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}

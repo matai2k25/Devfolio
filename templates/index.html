@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MatAI | Animated Solution Dude</title>
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='script/script.js') }}" defer></script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">MatAI<span class="heart">♥</span></div>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav id="navMenu">
+        <a href="/">Home</a>
+        <a href="/guide">Guideline</a>
+        <a href="/contact">Contact Us</a>
+      </nav>
+
+      <!-- Auth Button / User Info -->
+      {% if session.user %}
+        <div class="user-info">
+          <img src="{{ session.user.picture }}" alt="Profile" class="profile-pic">
+          <span class="user-name">{{ session.user.name }}</span>
+          <a class="join-btn" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+      {% else %}
+        <a class="join-btn" href="/login">Join Us</a>
+      {% endif %}
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+</body>
+</html>

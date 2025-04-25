@@ -1,0 +1,70 @@
+.contact-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;           /* Full height of viewport */
+    width: 100vw;            /* Full width of viewport */
+    padding: 2rem;           /* Reduced padding to prevent overflow on small screens */
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.contact-container {
+    background-color: #eeeadd;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #035f6f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #035f6f;
+}
+
+button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #035f6f;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #035f6f;
+}
+
+.message {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}

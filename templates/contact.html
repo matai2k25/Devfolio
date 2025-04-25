@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+<div class="contact-body">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="/contact" method="POST">
+            <button type="submit">
+                <a href="mailto:matai2k25@gmail.com" style="color: white; text-decoration: none;">Send Message</a>
+              </button>              
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

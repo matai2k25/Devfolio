@@ -1,0 +1,7 @@
+Flask
+authlib
+pymongo
+python-dotenv
+requests
+langchain
+langchain-groq
