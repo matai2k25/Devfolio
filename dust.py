@@ -9,7 +9,7 @@ import re
 
 
 # --------------------------- GROQ API SETTINGS --------------------------- #
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 headers = {
     "Authorization": f"Bearer {GROQ_API_KEY}",
     "Content-Type": "application/json"
@@ -225,7 +225,7 @@ error_pipeline = RunnableSequence(
 
 # ----------------------------- CLI INTERFACE -------------------------------- #
 
-def check_and_fix_code(manim_code):
+def check_and_fix_code(manim_code, cleaned_response):
     is_code_fixed = False
 
     while not is_code_fixed:
@@ -256,11 +256,19 @@ def check_and_fix_code(manim_code):
             else:
                 print("❌ Runtime errors found, sending to checker agent...")
                 # ✅ Step 4: Use agent to fix and return new code
-                manim_code = error_pipeline.invoke({
-                    "manim_code": cleaned_code,
-                    "error_message": result.stderr
-                }).content.strip()
-                print("Error Corrected")
+                initial_code = final_pipeline.invoke({
+                    "combined_input": cleaned_response  # Pass the full cleaned response as the input
+                })
+                raw_code = initial_code.content.strip()
+                
+                print("RAW CODE : ",raw_code)
+
+                # Remove all lines that contain backticks or language declarations
+                code_lines = [
+                    line for line in raw_code.splitlines()
+                    if "```" not in line and not line.strip().lower().startswith("python")
+                ]
+                manim_code = "\n".join(code_lines).strip()
 
         except Exception as e:
             print(f"🔥 Unexpected exception: {str(e)}")
@@ -285,4 +293,4 @@ def agent(cleaned_response):
     cleaned_code = "\n".join(code_lines).strip()
 
     # Step 2: Pass the cleaned code to the checker for fixes and beautification
-    final_code = check_and_fix_code(cleaned_code).strip()
+    final_code = check_and_fix_code(cleaned_code,cleaned_response).strip()

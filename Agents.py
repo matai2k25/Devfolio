@@ -11,7 +11,7 @@ from dust import agent
 
 
 # --------------------------- GROQ API SETTINGS --------------------------- #
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 headers = {
     "Authorization": f"Bearer {GROQ_API_KEY}",
     "Content-Type": "application/json"
