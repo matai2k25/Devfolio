@@ -2,7 +2,7 @@ Readme
 
 # MatAI – AI-Powered Math Assistant
 
-MatAI is a web-based application designed to assist users in solving mathematical problems using artificial intelligence. It is built with the Remix framework and deployed on Replit, offering an interactive interface and real-time explanations for a variety of math topics.
+MatAI is a web-based application designed to assist users in solving mathematical problems using artificial intelligence. It is built with the Flask framework and deployed on Replit,it uses groq llm to take the user input and generate a manim code which renders an animated video output offering an interactive interface and real-time explanations for a variety of math topics.
 
 ---
 
@@ -14,7 +14,6 @@ MatAI is a web-based application designed to assist users in solving mathematica
 - [Tech Stack](#tech-stack)
 - [Project Setup on Replit](#project-setup-on-replit)
 - [How to Use MatAI](#how-to-use-matai)
-- [Environment Variables](#environment-variables)
 - [Sample Queries](#sample-queries)
 - [Contributing](#contributing)
 - [Contact](#contact)
@@ -27,7 +26,7 @@ To access the live version of the project:
 
 1. Visit: `https://mat-ai.username.repl.co`
    - Replace `username` with your actual Replit username.
-2. Alternatively:
+2. Follow the steps:
    - Log in to your Replit account.
    - Open the MatAI project.
    - Click the "Run" button.
@@ -59,7 +58,7 @@ MatAI is designed to make math easy to understand. Whether you're a student need
 | Remix            | Full-stack web framework          |
 | Replit           | Online IDE and deployment         |
 | JavaScript       | Application logic and interaction |
-| OpenAI API (opt) | AI-based math problem solving     |
+| Groq | AI-based math problem solving     |
 
 ---
 
@@ -86,16 +85,6 @@ To run this project in Replit:
 
 ---
 
-## Environment Variables
-
-To use AI functionality such as OpenAI API:
-
-1. Create a `.env` file in the root directory.
-2. Add the following line:
-
-3. Replit automatically uses the `.env` file for environment variables when running the application.
-
----
 
 ## Sample Queries
 
