@@ -69,7 +69,7 @@ MatAI solves the problem of inaccessible or hard-to-understand math learning by 
 ## 📽️ Demo & Deliverables
 
 - **Demo Video Link:** [[MatAI](https://www.youtube.com/watch?v=3wg_1Ufdyps)]  
-- **Pitch Deck / PPT Link:** [[PPT](https://docs.google.com/presentation/d/11syayCTA-uatj_wx9HIQh9sDP36x1mZJ/edit?usp=sharing&ouid=108985873082775546785&rtpof=true&sd=true)]  
+- **Pitch Deck / PPT Link:** [[PPT](https://docs.google.com/presentation/d/1zD_KA2jp0EsM2OVSup8p2ciTmENfWF3Q/edit?usp=sharing&ouid=108985873082775546785&rtpof=true&sd=true)]  
 
 ---
 
