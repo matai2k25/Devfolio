@@ -11,7 +11,7 @@
 
 ## 📌 Problem Statement
 
-**Problem Statement 5 – Personalized Learning Solutions using AI**
+**Problem Statement 1 – Weave AI magic with Groq**
 
 ---
 
