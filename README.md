@@ -1,118 +1,138 @@
-Readme
-
-# MatAI – AI-Powered Math Assistant
-
-MatAI is a web-based application designed to assist users in solving mathematical problems using artificial intelligence. It is built with the Flask framework and deployed on Replit,it uses groq llm to take the user input and generate a manim code which renders an animated video output offering an interactive interface and real-time explanations for a variety of math topics.
 
 ---
 
-## Table of Contents
+![github-submission-banner](https://github.com/user-attachments/assets/a1493b84-e4e2-456e-a791-ce35ee2bcf2f)
 
-- [Live Access](#live-access)
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Setup on Replit](#project-setup-on-replit)
-- [How to Use MatAI](#how-to-use-matai)
-- [Sample Queries](#sample-queries)
-- [Contributing](#contributing)
-- [Contact](#contact)
+# 🚀 MatAI – AI-Powered Math Assistant
+
+> Making math visual, simple, and interactive with the power of AI.
 
 ---
 
-## Live Access
+## 📌 Problem Statement
 
-To access the live version of the project:
-
-1. Visit: `https://mat-ai.username.repl.co`
-   - Replace `username` with your actual Replit username.
-2. Follow the steps:
-   - Log in to your Replit account.
-   - Open the MatAI project.
-   - Click the "Run" button.
-   - Click "Open in a new tab" from the preview pane.
-   - Copy the URL from the browser to access or share the project.
+**Problem Statement 5 – Personalized Learning Solutions using AI**
 
 ---
 
-## Overview
+## 🎯 Objective
 
-MatAI is designed to make math easy to understand. Whether you're a student needing help with algebra, calculus, or trigonometry, or a teacher looking for an AI assistant, MatAI provides clear, step-by-step solutions and insights into various mathematical problems.
-
----
-
-## Features
-
-- Solves a wide range of mathematical problems, including algebra, calculus, and geometry.
-- Offers detailed step-by-step solutions.
-- Supports input of expressions, equations, and word problems.
-- Renders graphs and visual aids for applicable problems.
-- Fully functional in a web browser without any installation.
+MatAI solves the problem of inaccessible or hard-to-understand math learning by providing AI-powered, visual, and step-by-step solutions to mathematical problems. It is designed to assist students, educators, and lifelong learners in exploring and understanding math topics like algebra, calculus, and trigonometry.
 
 ---
 
-## Tech Stack
+## 🧠 Team & Approach
 
-| Component        | Description                       |
-|------------------|-----------------------------------|
-| Remix            | Full-stack web framework          |
-| Replit           | Online IDE and deployment         |
-| JavaScript       | Application logic and interaction |
-| Groq | AI-based math problem solving     |
+### Team Name:  
+**Altimus**
 
----
+### Team Members:  
+- Kowsigan M V  
+- Haritha B R
+- Dhanush Rendran 
+- Mokana priyaa S
 
-## Project Setup on Replit
-
-To run this project in Replit:
-
-1. Go to [https://replit.com](https://replit.com) and log in.
-2. Import or fork the MatAI repository.
-3. Open the project.
-4. Click the "Run" button at the top.
-5. After the server starts, use the "Open in a new tab" option in the preview panel to launch the live app.
-6. The opened URL is your live project link.
+### Your Approach:  
+- Chose this problem to bridge the gap in accessible math education.
+- Key challenges: parsing user math queries, generating valid Manim code, and rendering animations dynamically.
+- Pivoted from just text-based output to visual explanation using Manim for better clarity.
 
 ---
 
-## How to Use MatAI
+## 🛠️ Tech Stack
 
-1. Open the live application link.
-2. Enter your math question in the input field (e.g., `Solve x^2 - 5x + 6 = 0`).
-3. Click the "Solve" button or press Enter.
-4. View the step-by-step solution, graphical representation (if applicable), and explanation.
-5. Try multiple types of problems to explore different features.
+### Core Technologies Used:
+- **Frontend:** Remix  
+- **Backend:** Flask  
+- **APIs:** Groq LLM for Manim code generation  
+- **Hosting:** Replit
 
----
-
-
-## Sample Queries
-
-Here are some examples to test MatAI:
-
-- `Solve 2x + 5 = 15`
-- `Differentiate x^3 + 2x^2`
-- `Integrate sin(x)`
-- `Find the limit of (x^2 - 1)/(x - 1) as x approaches 1`
-- `Area of a triangle with base 6 and height 4`
+### Sponsor Technologies Used (if any):
+- ✅ **Groq:** Used to generate Manim scripts from user input for animated math visualizations.  
+- [ ] **Monad**  
+- [ ] **Fluvio**  
+- [ ] **Base**  
+- [ ] **Screenpipe**  
+- [ ] **Stellar**
 
 ---
 
-## Contributing
+## ✨ Key Features
 
-Contributions are welcome. To contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes with clear messages.
-4. Push your branch and open a pull request.
+- ✅ Solve algebra, calculus, and geometry problems  
+- ✅ Step-by-step explanations  
+- ✅ Animated video generation using Manim  
+- ✅ Graphical representations for visual understanding  
 
 ---
 
-## Contact
+## 📽️ Demo & Deliverables
 
-For questions, suggestions, or support:
-
-Email: matai2k25@gmail.com
+- **Demo Video Link:** [[MatAI](https://www.youtube.com/watch?v=3wg_1Ufdyps)]  
+- **Pitch Deck / PPT Link:** [Insert Google Slides or PDF link here]  
 
 ---
+
+## ✅ Tasks & Bonus Checklist
+
+- [ ] All members of the team completed the mandatory task  
+- [ ] Bonus Task 1 - Badge sharing  
+- ✅ Bonus Task 2 - Sprint.dev signup  
+
+---
+
+## 🧪 How to Run the Project
+
+### Requirements:
+- Python  
+- Flask  
+- Manim  
+- Groq API key  
+- `.env` file with necessary environment variables
+
+### Local Setup:
+```bash
+# Clone the repo
+git clone https://github.com/your-team/matai
+
+# Install dependencies
+cd matai
+pip install -r requirements.txt
+
+# Add your .env file with GROQ_API_KEY and other configs
+
+# Run the server
+python app.py
+```
+
+On Replit:
+1. Import or fork the repository.
+2. Click "Run".
+3. Click "Open in new tab" from the preview pane.
+
+---
+
+## 🧬 Future Scope
+
+- 📈 Add support for more math domains (statistics, probability)  
+- 🛡️ Enhance input sanitization and error handling  
+- 🌐 Add multilingual support for broader reach  
+
+---
+
+## 📎 Resources / Credits
+
+- [Groq API](https://groq.com)  
+- [Manim Community Edition](https://docs.manim.community/)  
+- [Flask](https://flask.palletsprojects.com/)  
+- [Replit](https://replit.com)  
+
+---
+
+## 🏁 Final Words
+
+We had a great time building MatAI — from brainstorming how to convert text math queries into animations, to watching math problems come alive in real-time! It’s been an enriching and exciting journey 🎉
+
+---
+
+Would you like a downloadable version of this as a `README.md` file?
