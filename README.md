@@ -29,7 +29,7 @@ MatAI solves the problem of inaccessible or hard-to-understand math learning by 
 ### Team Members:  
 - Kowsigan M V  
 - Haritha B R
-- Dhanush Rendran 
+- Dhanush Rendran K K
 - Mokana priyaa S
 
 ### Your Approach:  
